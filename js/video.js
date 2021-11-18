@@ -15,19 +15,19 @@ document.querySelector("#play").addEventListener("click", function() {
 // PAUSE
 document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
-	video.pause()
+	video.pause();
 });
 
 // SLOWER
 document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate * 0.95;
-	console.log("New speed is " + video.playbackRate)
+	console.log("New speed: " + video.playbackRate)
 });
 
 // FASTER
 document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate * 1.05;
-	console.log("New speed is " + video.playbackRate)
+	console.log("New speed: " + video.playbackRate)
 });
 
 // SKIP 
@@ -39,7 +39,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = 0;
 		console.log("Beginning")
 	}
-	console.log( "Current location is " + video.currentTime)
+	console.log( "Current location: " + video.currentTime)
 	video.play()
 });
 
@@ -48,10 +48,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 	console.log("Mute Video")
 	if (video.muted ===false) {
 		video.muted = true;
-		this.innerHTML = "Unmute"
+		this.innerHTML = "Unmute";
 	}
 	else {
-		this.innerHTML = "Mute"
+		this.innerHTML = "Mute";
 		video.muted = false;
 	}
 });
@@ -65,12 +65,12 @@ document.querySelector("#slider").addEventListener("change", function() {
 
 // STYLED 
 document.querySelector("#vintage").addEventListener("click", function() {
-	console.log('Vintage');
+	console.log('Old School Version');
 	video.classList.add("oldSchool");
 });
 
 // ORIGINAL 
 document.querySelector("#orig").addEventListener("click", function() {
-	console.log('Original');
+	console.log('Original Version');
 	video.classList.remove("oldSchool");
 });
