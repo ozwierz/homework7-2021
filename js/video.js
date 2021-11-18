@@ -10,8 +10,6 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	let vol = volume.innerHTML = (video.volume * 100) + "%";
-	video.volume = (this.value/100);
-	console.log(this.value);
 });
 
 // PAUSE
@@ -60,9 +58,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 // VOLUME SLIDER
 document.querySelector("#slider").addEventListener("click", function() {
+	console.log(this.value);
 	let vol = volume.innerHTML = this.value + "%";
 	video.volume = (this.value/100);
-	console.log(this.value);
+
 });
 
 // STYLED 
